@@ -1,0 +1,7 @@
+.molecule
+.vagrant
+.cache
+*.swp
+.DS_Store
+__pycache__
+*.pyc

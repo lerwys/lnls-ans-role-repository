@@ -1,0 +1,7 @@
+debian_jessie  ansible_host=192.168.33.10
+debian_stretch ansible_host=192.168.33.11
+ubuntu_trusty  ansible_host=192.168.33.12
+ubuntu_xenial  ansible_host=192.168.33.13
+
+[all:vars]
+ansible_ssh_private_key_file=.vagrant/machines/{{ inventory_hostname }}/virtualbox/private_key
