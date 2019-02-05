@@ -3,7 +3,7 @@ LNLS Ansible Role Repository
 
 References: https://bitbucket.org/europeanspallationsource/ics-ans-role-repository
 
-This Ansible role enables the EPEL and ESS LNLS RPM repositories.
+This Ansible role enables the Debian NSLS-II repositories.
 
 ## Requirements
 
