@@ -23,15 +23,27 @@ platforms:
     image: debian:jessie
     groups:
       - default_group
+    dns_servers:
+      - 10.0.0.71
+      - 10.0.0.72
   - name: lnls-ans-role-repository-debian-stretch
     image: debian:stretch
     groups:
       - default_group
+    dns_servers:
+      - 10.0.0.71
+      - 10.0.0.72
   - name: lnls-ans-role-repository-ubuntu-trusty
     image: ubuntu:trusty
     groups:
       - default_group
+    dns_servers:
+      - 10.0.0.71
+      - 10.0.0.72
   - name: lnls-ans-role-repository-ubuntu-xenial
     image: ubuntu:xenial
     groups:
       - default_group
+    dns_servers:
+      - 10.0.0.71
+      - 10.0.0.72
