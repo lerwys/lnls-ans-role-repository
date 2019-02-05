@@ -1,6 +1,8 @@
 LNLS Ansible Role Repository
 =======================
 
+[![Build Status](https://travis-ci.org/lerwys/lnls-ans-role-repository.svg?branch=master)](https://travis-ci.org/lerwys/lnls-ans-role-repository)
+
 References: https://bitbucket.org/europeanspallationsource/ics-ans-role-repository
 
 This Ansible role enables the Debian NSLS-II repositories.
