@@ -10,6 +10,8 @@ provisioner:
   inventory:
     group_vars:
       default_group:
+      debian_stretch_based:
+      debian_jessie_based:
 scenario:
   name: default
 verifier:
@@ -22,6 +24,7 @@ platforms:
   - name: lnls-ans-role-repository-debian-jessie
     image: debian:jessie
     groups:
+      - debian_jessie_based
       - default_group
     dns_servers:
       - 10.0.0.71
@@ -29,6 +32,7 @@ platforms:
   - name: lnls-ans-role-repository-debian-stretch
     image: debian:stretch
     groups:
+      - debian_stretch_based
       - default_group
     dns_servers:
       - 10.0.0.71
@@ -36,6 +40,7 @@ platforms:
   - name: lnls-ans-role-repository-ubuntu-trusty
     image: ubuntu:trusty
     groups:
+      - debian_jessie_based
       - default_group
     dns_servers:
       - 10.0.0.71
@@ -43,6 +48,7 @@ platforms:
   - name: lnls-ans-role-repository-ubuntu-xenial
     image: ubuntu:xenial
     groups:
+      - debian_stretch_based
       - default_group
     dns_servers:
       - 10.0.0.71
