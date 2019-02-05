@@ -62,7 +62,7 @@ On a Fedra 29 system, using python3-7, the following fixes the issue:
     cp -r /usr/lib64/python3.7/site-packages/_selinux.cpython-37m-x86_64-linux-gnu.so env/lib64/python3.7/site-packages/
 ```
 
-Be advides, that the python versions might differ and the library names, as well.
+Be advised, that the python versions might differ and the library names, as well.
 
 ## License
 
