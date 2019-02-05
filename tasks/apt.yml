@@ -3,7 +3,7 @@
   become: true
   apt:
     name:
-      - gnugpg
+      - gnupg
       - apt-transport-https
     state: present
 
