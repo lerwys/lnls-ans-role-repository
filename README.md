@@ -8,7 +8,7 @@ This Ansible role enables the Debian NSLS-II repositories.
 ## Requirements
 
 - ansible >= 2.2
-- molecule >= 1.20
+- molecule >= 2.20
 
 Role Variables
 
