@@ -1,4 +1,12 @@
 ---
+- name: Install GPG packages
+  become: true
+  apt:
+    name:
+      - gnugpg
+      - apt-transport-https
+    state: present
+
 - name: Import APT GPG keys
   apt_key:
     url: "{{ item.url }}"
