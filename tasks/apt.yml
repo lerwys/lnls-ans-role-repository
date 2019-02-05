@@ -13,6 +13,5 @@
     state: "{{ item.state }}"
     filename: "{{ item.file }}"
     update_cache: true
-  notify: Cleans APT metadata
   with_items:
     - "{{ repository_apt_baseurl }}"
