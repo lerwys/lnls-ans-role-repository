@@ -36,7 +36,7 @@ Tests are performed using Molecule. To run them with python virtualenv, issue:
         virtualenv env --python python3 && \
         source env/bin/activate && \
         cd lnls-ans-role-repository && \
-        pip install molecule && \
+        pip install molecule docker-py && \
         molecule test"
 ```
 
