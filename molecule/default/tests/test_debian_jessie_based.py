@@ -8,8 +8,6 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 @pytest.mark.parametrize('repo', [
-    'http://deb.debian.org/debian jessie/main',
-    'http://security.debian.org/debian-security jessie/updates/main',
     'https://epicsdeb.bnl.gov/debian jessie/stable/main',
 ])
 def test_repos(host, repo):
