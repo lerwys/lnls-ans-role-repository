@@ -44,7 +44,7 @@ Tests are performed using Molecule. To run them with python virtualenv, issue:
 
 ## Troubleshooting
 
-If you use a host system with SELinux enabled you might get an error when using 
+If you use a host system with SELinux enabled you might get an error when using
 Ansible like the following:
 
 ```bash
