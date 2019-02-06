@@ -10,14 +10,10 @@ galaxy_info:
     - name: Debian
       versions:
         - stretch
-    - name: Debian
-      versions:
         - jessie
     - name: Ubuntu
       versions:
         - xenial
-    - name: Ubuntu
-      versions:
         - trusty
 
 dependencies: []
