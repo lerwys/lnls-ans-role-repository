@@ -15,6 +15,7 @@
     keyring: "{{ item.keyring_path }}/{{ item.file }}"
   with_items:
     - "{{ repository_deb_nsls }}"
+  become: true
 
 - name: Add default repositories
   apt_repository:
@@ -24,3 +25,4 @@
     update_cache: true
   with_items:
     - "{{ repository_apt_baseurl }}"
+  become: true
