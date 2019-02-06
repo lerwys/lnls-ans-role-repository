@@ -1,12 +1,12 @@
 ---
 - name: Install GPG packages
-  become: true
   apt:
     name:
       - gnupg
       - apt-transport-https
     state: present
     update_cache: true
+  become: true
 
 - name: Import APT GPG keys
   apt_key:
