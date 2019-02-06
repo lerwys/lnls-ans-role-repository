@@ -9,15 +9,15 @@ galaxy_info:
   platforms:
     - name: Debian
       versions:
-        - 9
+        - stretch
     - name: Debian
       versions:
-        - 8
+        - jessie
     - name: Ubuntu
       versions:
-        - 16
+        - xenial
     - name: Ubuntu
       versions:
-        - 14
+        - trusty
 
 dependencies: []
