@@ -14,16 +14,3 @@ def test_repos(host, repo):
     cmd = host.run('apt-cache policy | grep http | awk \'{print $2,$3}\' | sort -u')
 
     assert repo in cmd.stdout
-
-
-@pytest.mark.parametrize('pkg', [
-    'epics-dev',
-])
-def test_install_deb(host, pkg):
-    cmd = host.run('apt-get install -y %s' % pkg)
-
-    assert cmd.rc == 0
-
-    package = host.package(pkg)
-
-    assert package.is_installed
