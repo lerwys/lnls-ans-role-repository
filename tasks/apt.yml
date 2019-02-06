@@ -7,6 +7,10 @@
     state: present
     update_cache: true
   become: true
+  register: apt_result
+  until: apt_result is success
+  retries: 10
+  delay: 2
 
 - name: Import APT GPG keys
   apt_key:
