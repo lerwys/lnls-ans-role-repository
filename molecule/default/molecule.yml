@@ -28,30 +28,22 @@ platforms:
     groups:
       - debian_jessie_based
       - default_group
-    dns_servers:
-      - 10.0.0.71
-      - 10.0.0.72
+    dns_servers: ["${DNS_SERVER1}", "${DNS_SERVER2}"]
   - name: lnls-ans-role-repository-debian-stretch
     image: debian:stretch
     groups:
       - debian_stretch_based
       - default_group
-    dns_servers:
-      - 10.0.0.71
-      - 10.0.0.72
+    dns_servers: ["${DNS_SERVER1}", "${DNS_SERVER2}"]
   - name: lnls-ans-role-repository-ubuntu-trusty
     image: ubuntu:trusty
     groups:
       - debian_jessie_based
       - default_group
-    dns_servers:
-      - 10.0.0.71
-      - 10.0.0.72
+    dns_servers: ["${DNS_SERVER1}", "${DNS_SERVER2}"]
   - name: lnls-ans-role-repository-ubuntu-xenial
     image: ubuntu:xenial
     groups:
       - debian_stretch_based
       - default_group
-    dns_servers:
-      - 10.0.0.71
-      - 10.0.0.72
+    dns_servers: ["${DNS_SERVER1}", "${DNS_SERVER2}"]
