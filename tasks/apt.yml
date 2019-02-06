@@ -20,6 +20,10 @@
   with_items:
     - "{{ repository_deb_nsls }}"
   become: true
+  register: gpg_import
+  until: gpg_import is success
+  retries: 10
+  delay: 2
 
 - name: Add default repositories
   apt_repository:
