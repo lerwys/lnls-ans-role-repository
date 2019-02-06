@@ -42,6 +42,22 @@ Tests are performed using Molecule. To run them with python virtualenv, issue:
         molecule test"
 ```
 
+Optionally, you can specify dns servers to be used for both
+provisioner create and run (docker in our case), by using
+the following variables:
+
+
+```bash
+    export DNS_SERVER1="<DNS server 1>"
+    export DNS_SERVER2="<DNS server 2>"
+```
+
+This can be used, for instance, in hosts that have non-default
+DNS configurations that docker can't access, such as when
+using local systemd-resolv DNS (e.g., 127.x.y.z) or when DNS
+servers are set via DHCP with local non-routable IP addresses
+(e.g., 10.x.y.z).
+
 ## Troubleshooting
 
 If you use a host system with SELinux enabled you might get an error when using
