@@ -7,9 +7,11 @@ FROM {{ item.image }}
 {% endif %}
 
 RUN \
-{% if item.dns_servers is defined %}
+{% if item.dns_servers is defined and item.dns_servers %}
     {% for dns in item.dns_servers %}
-        echo "nameserver {{ dns }}" >> /etc/resolv.conf && \
+        {% if dns|length %}
+            echo "nameserver {{ dns }}" >> /etc/resolv.conf && \
+        {% endif %}
     {% endfor %}
 {% endif %}
     if [ $(command -v apt-get) ]; then apt-get update && apt-get install -y python sudo bash ca-certificates && apt-get clean; \
