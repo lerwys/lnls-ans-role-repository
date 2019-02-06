@@ -6,6 +6,7 @@
       - gnupg
       - apt-transport-https
     state: present
+    update_cache: true
 
 - name: Import APT GPG keys
   apt_key:
