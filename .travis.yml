@@ -8,8 +8,8 @@ services:
 # Set CI_TRACE=true to enable shell script tracing in Travis
 env:
   global:
-    - DNS_SERVER1: 1.1.1.1
-    - DNS_SERVER2: 8.8.8.8
+    - DNS_SERVER1=1.1.1.1
+    - DNS_SERVER2=8.8.8.8
     - CI_TIME=false
     - CI_TRACE=false
   matrix:
