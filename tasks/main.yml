@@ -10,4 +10,12 @@
       paths:
         - '{{ role_path }}/vars'
 
-- include_tasks: '{{ package_manager|default("apt") }}.yml'
+  # Setup/install tasks
+- include_tasks: setup-Debian.yml
+  when:
+    - ansible_os_family == 'Debian'
+
+# Install from sources when it's not Debian.
+- include_tasks: install-from-source.yml
+  when:
+    - ansible_os_family != 'Debian'
