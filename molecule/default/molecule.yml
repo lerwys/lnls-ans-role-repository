@@ -38,12 +38,12 @@ platforms:
   - name: lnls-ans-role-repository-ubuntu-trusty
     image: ubuntu:trusty
     groups:
-      - debian_jessie_based
+      - debian_ubuntu_trusty_based
       - default_group
     dns_servers: ["${DNS_SERVER1}", "${DNS_SERVER2}"]
   - name: lnls-ans-role-repository-ubuntu-xenial
     image: ubuntu:xenial
     groups:
-      - debian_stretch_based
+      - debian_ubuntu_xenial_based
       - default_group
     dns_servers: ["${DNS_SERVER1}", "${DNS_SERVER2}"]
