@@ -17,7 +17,7 @@ repository_apt:
       keyring_path: {{ repository_deb_nsls.keyring_path }}
       file: {{ repository_deb_nsls.file }}
 
-  - name : NSLS2 EPICS debian repository sources
+  - name: NSLS2 EPICS debian repository sources
     repo:
       baseurl: "deb-src https://epicsdeb.bnl.gov/debian jessie main contrib"
       description: "NSLS-II Debian EPICS repository"
