@@ -13,9 +13,9 @@ repository_apt:
       file: nsls2-epics-debian
       state: present
     key:
-      url: {{ repository_deb_nsls.url }}
-      keyring_path: {{ repository_deb_nsls.keyring_path }}
-      file: {{ repository_deb_nsls.file }}
+      url: "{{ repository_deb_nsls.url }}"
+      keyring_path: "{{ repository_deb_nsls.keyring_path }}"
+      file: "{{ repository_deb_nsls.file }}"
 
   - name: NSLS2 EPICS debian repository sources
     repo:
@@ -24,6 +24,6 @@ repository_apt:
       file: nsls2-epics-debian-src
       state: present
     key:
-      url: {{ repository_deb_nsls.url }}
-      keyring_path: {{ repository_deb_nsls.keyring_path }}
-      file: {{ repository_deb_nsls.file }}
+      url: "{{ repository_deb_nsls.url }}"
+      keyring_path: "{{ repository_deb_nsls.keyring_path }}"
+      file: "{{ repository_deb_nsls.file }}"
