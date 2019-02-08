@@ -14,11 +14,13 @@
 
 - name: Import APT GPG keys
   apt_key:
-    url: "{{ item.key.url }}"
+    url: "{{ item.url | default(omit) }}"
+    keyserver: "{{ item.keyserver | default(omit) }}"
+    id: "{{ item.id | default(omit) }}"
     state: present
-    keyring: "{{ item.key.keyring_path }}/{{ item.key.file }}"
+    keyring: "{{ item.keyring | default(omit) }}"
   with_items:
-    - "{{ repository_apt }}"
+    - "{{ repository_keys }}"
   become: true
   register: gpg_import
   until: gpg_import is success
@@ -27,9 +29,9 @@
 
 - name: Add default repositories
   apt_repository:
-    repo: "{{ item.repo.baseurl }}"
-    state: "{{ item.repo.state }}"
-    filename: "{{ item.repo.file }}"
+    repo: "{{ item.baseurl }}"
+    state: "{{ item.state }}"
+    filename: "{{ item.file }}"
     update_cache: true
   with_items:
     - "{{ repository_apt }}"
