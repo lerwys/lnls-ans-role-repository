@@ -1,7 +1,4 @@
 ---
-# Package Manager
-package_manager: apt
-
 # APT repositories
 repository_deb_nsls:
   - url: https://epicsdeb.bnl.gov/debian/repo-key.pub
