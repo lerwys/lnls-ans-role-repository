@@ -12,18 +12,31 @@
   retries: 10
   delay: 2
 
-- name: Import APT GPG keys
+- name: Import APT GPG keys by URL
   apt_key:
-    url: "{{ item.url | default(omit) }}"
-    keyserver: "{{ item.keyserver | default(omit) }}"
-    id: "{{ item.id | default(omit) }}"
+    url: "{{ item.url }}"
+    keyring: "{{ item.keyring }}"
     state: present
-    keyring: "{{ item.keyring | default(omit) }}"
+  when: item.url is defined and item.url|length > 0
   with_items:
     - "{{ repository_keys }}"
   become: true
-  register: gpg_import
-  until: gpg_import is success
+  register: gpg_import_url
+  until: gpg_import_url is success
+  retries: 10
+  delay: 2
+
+- name: Import APT GPG keys by keyserver
+  apt_key:
+    keyserver: "{{ item.keyserver }}"
+    id: "{{ item.id }}"
+    state: present
+  when: item.keyserver is defined and item.keyserver|length > 0
+  with_items:
+    - "{{ repository_keys }}"
+  become: true
+  register: gpg_import_key
+  until: gpg_import_key is success
   retries: 10
   delay: 2
 
