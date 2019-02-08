@@ -52,9 +52,9 @@ __repository_apt:
 
 __apt_pinning_paths:
   - name: Pinning path for NSLS2 EPICS repository
-    filename: epicsdeb
+    filename: epicsdeb-repo-pref
     pathname: "/etc/apt/preferences.d"
 
   - name: Pinning path for Debian Jessie repository
-    filename: jessie
+    filename: jessie-repo-pref
     pathname: "/etc/apt/preferences.d"
