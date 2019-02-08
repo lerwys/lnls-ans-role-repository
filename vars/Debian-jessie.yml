@@ -1,16 +1,29 @@
 ---
 # APT repositories
 repository_deb_nsls:
-  - url: https://epicsdeb.bnl.gov/debian/repo-key.pub
-    keyring_path: /etc/apt/trusted.gpg.d
-    file: nsls2-epics-debian.gpg
+  url: https://epicsdeb.bnl.gov/debian/repo-key.pub
+  keyring_path: /etc/apt/trusted.gpg.d
+  file: nsls2-epics-debian.gpg
 
-repository_apt_baseurl:
-  - baseurl: "deb https://epicsdeb.bnl.gov/debian jessie main contrib"
-    description: "NSLS-II Debian EPICS repository"
-    file: nsls2-epics-debian
-    state: present
-  - baseurl: "deb-src https://epicsdeb.bnl.gov/debian jessie main contrib"
-    description: "NSLS-II Debian EPICS repository"
-    file: nsls2-epics-debian-src
-    state: present
+repository_apt:
+  - name: NSLS2 EPICS debian repository
+    repo:
+      baseurl: "deb https://epicsdeb.bnl.gov/debian jessie main contrib"
+      description: "NSLS-II Debian EPICS repository"
+      file: nsls2-epics-debian
+      state: present
+    key:
+      url: {{ repository_deb_nsls.url }}
+      keyring_path: {{ repository_deb_nsls.keyring_path }}
+      file: {{ repository_deb_nsls.file }}
+
+  - name : NSLS2 EPICS debian repository sources
+    repo:
+      baseurl: "deb-src https://epicsdeb.bnl.gov/debian jessie main contrib"
+      description: "NSLS-II Debian EPICS repository"
+      file: nsls2-epics-debian-src
+      state: present
+    key:
+      url: {{ repository_deb_nsls.url }}
+      keyring_path: {{ repository_deb_nsls.keyring_path }}
+      file: {{ repository_deb_nsls.file }}
