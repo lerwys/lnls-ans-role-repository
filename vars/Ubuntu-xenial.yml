@@ -1,6 +1,6 @@
 ---
 # APT repositories
-repository_keys:
+__repository_keys:
   - name: Debian NSLS2 key
     url: https://epicsdeb.bnl.gov/debian/repo-key.pub
     keyring: /etc/apt/trusted.gpg.d/nsls2-epics-debian.gpg
@@ -21,7 +21,7 @@ repository_keys:
     keyserver: keyserver.ubuntu.com
     id: 8B48AD6246925553
 
-repository_apt:
+__repository_apt:
   - name: NSLS2 EPICS debian repository
     baseurl: "deb https://epicsdeb.bnl.gov/debian stretch/staging main contrib"
     description: "NSLS-II Debian EPICS repository"

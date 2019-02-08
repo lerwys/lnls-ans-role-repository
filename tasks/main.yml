@@ -10,6 +10,16 @@
       paths:
         - '{{ role_path }}/vars'
 
+- name: Define Repository keys
+  set_fact:
+    repository_keys: "{{ __repository_keys | list }}"
+  when: repository_keys is not defined
+
+- name: Define Repository keys
+  set_fact:
+    repository_apt: "{{ __repository_apt | list }}"
+  when: repository_apt is not defined
+
 # Setup/install tasks
 - include_tasks: setup-Debian.yml
   when:
