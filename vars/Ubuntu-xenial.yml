@@ -7,6 +7,18 @@ repository_keys:
     keyserver:
     id:
 
+  - name: Debian Stretch 1 key
+    url:
+    keyring:
+    keyserver: keyserver.ubuntu.com
+    id: EF0F382A1A7B6500
+
+  - name: Debian Stretch 2 key
+    url:
+    keyring:
+    keyserver: keyserver.ubuntu.com
+    id: 7638D0442B90D010
+
 repository_apt:
   - name: NSLS2 EPICS debian repository
     baseurl: "deb https://epicsdeb.bnl.gov/debian stretch/statging main contrib"
@@ -18,4 +30,28 @@ repository_apt:
     baseurl: "deb-src https://epicsdeb.bnl.gov/debian stretch/statging main contrib"
     description: "NSLS-II Debian EPICS repository"
     file: nsls2-epics-debian-src
+    state: present
+
+  - name: Debian Stretch repository
+    baseurl: "deb http://deb.debian.org/debian stretch main"
+    description: "Debian Stretch repository"
+    file: debian_stretch
+    state: present
+
+  - name: Debian Stretch repository sources
+    baseurl: "deb-src http://deb.debian.org/debian stretch main"
+    description: "Debian Stretch repository"
+    file: debian_stretch-src
+    state: present
+
+  - name: Debian Stretch security repository
+    baseurl: "deb http://security.debian.org/debian-security stretch/updates main"
+    description: "Debian Stretch security repository"
+    file: debian_stretch
+    state: present
+
+  - name: Debian Stretch security repository sources
+    baseurl: "deb-src http://security.debian.org/debian-security stretch/updates main"
+    description: "Debian Stretch security repository"
+    file: debian_stretch-src
     state: present
