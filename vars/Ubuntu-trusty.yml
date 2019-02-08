@@ -29,23 +29,23 @@ repository_apt:
   - name: Debian Jessie repository
     baseurl: "deb http://deb.debian.org/debian jessie main"
     description: "Debian Jessie repository"
-    file: debian_jessie
+    file: debian-jessie-main
     state: present
 
   - name: Debian Jessie repository sources
     baseurl: "deb-src http://deb.debian.org/debian jessie main"
     description: "Debian Jessie repository"
-    file: debian_jessie-src
+    file: debian-jessie-main-src
     state: present
 
   - name: Debian Jessie security repository
     baseurl: "deb http://security.debian.org/debian-security jessie/updates main"
     description: "Debian Jessie security repository"
-    file: debian_jessie
+    file: debian-jessie-updates
     state: present
 
   - name: Debian Jessie security repository sources
     baseurl: "deb-src http://security.debian.org/debian-security jessie/updates main"
     description: "Debian Jessie security repository"
-    file: debian_jessie-src
+    file: debian-jessie-updates-src
     state: present
