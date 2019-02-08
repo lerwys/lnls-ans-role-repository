@@ -4,18 +4,12 @@ repository_keys:
   - name: Debian NSLS2 key
     url: https://epicsdeb.bnl.gov/debian/repo-key.pub
     keyring: /etc/apt/trusted.gpg.d/nsls2-epics-debian.gpg
-    keyserver:
-    id:
 
   - name: Debian Stretch 1 key
-    url:
-    keyring:
     keyserver: keyserver.ubuntu.com
     id: EF0F382A1A7B6500
 
   - name: Debian Stretch 2 key
-    url:
-    keyring:
     keyserver: keyserver.ubuntu.com
     id: 7638D0442B90D010
 

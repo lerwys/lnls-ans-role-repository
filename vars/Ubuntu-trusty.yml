@@ -4,12 +4,8 @@ repository_keys:
   - name: Debian NSLS2 key
     url: https://epicsdeb.bnl.gov/debian/repo-key.pub
     keyring: /etc/apt/trusted.gpg.d/nsls2-epics-debian.gpg
-    keyserver:
-    id:
 
   - name: Debian Jessie key
-    url:
-    keyring:
     keyserver: keyserver.ubuntu.com
     id: 9D6D8F6BC857C906
 
