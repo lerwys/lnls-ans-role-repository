@@ -10,7 +10,7 @@
       paths:
         - '{{ role_path }}/vars'
 
-  # Setup/install tasks
+# Setup/install tasks
 - include_tasks: setup-Debian.yml
   when:
     - ansible_os_family == 'Debian'
