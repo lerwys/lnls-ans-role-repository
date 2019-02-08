@@ -52,3 +52,6 @@
     - "{{ repository_apt }}"
   notify: Delete APT pinning configuration
   become: true
+
+# Configure APT pinning
+- include_tasks: apt-pinning-configure.yml
