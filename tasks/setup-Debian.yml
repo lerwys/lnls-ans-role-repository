@@ -40,6 +40,8 @@
   retries: 10
   delay: 2
 
+# Ansible will call my handler only once even is just one new repository
+# was added, which is what we want
 - name: Add default repositories
   apt_repository:
     repo: "{{ item.baseurl }}"
@@ -48,4 +50,5 @@
     update_cache: true
   with_items:
     - "{{ repository_apt }}"
+  notify: Delete APT pinning configuration
   become: true
