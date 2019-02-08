@@ -49,3 +49,12 @@ __repository_apt:
     description: "Debian Jessie security repository"
     file: debian-jessie-updates-src
     state: present
+
+__apt_pinning_paths:
+  - name: Pinning path for NSLS2 EPICS repository
+    pathname: epicsdeb
+    filename: "/etc/apt/preferences.d"
+
+  - name: Pinning path for Debian Jessie repository
+    pathname: jessie
+    filename: "/etc/apt/preferences.d"

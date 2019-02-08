@@ -20,6 +20,11 @@
     repository_apt: "{{ __repository_apt | list }}"
   when: repository_apt is not defined
 
+- name: Define APT pinning paths
+  set_fact:
+    apt_pinning_paths: "{{ __apt_pinning_paths | default([]) }}"
+  when: apt_pinning_paths is not defined
+
 # Setup/install tasks
 - include_tasks: setup-Debian.yml
   when:
