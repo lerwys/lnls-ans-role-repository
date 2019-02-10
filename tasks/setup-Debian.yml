@@ -53,5 +53,8 @@
   notify: Delete APT pinning configuration
   become: true
 
+- name: Force handlers to run at this point
+  meta: flush_handlers
+
 # Configure APT pinning
 - include_tasks: apt-pinning-configure.yml
