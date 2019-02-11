@@ -7,6 +7,7 @@
     group: root
     force: true
     mode: 0644
+  become: true
   with_items:
     - "{{ apt_pinning_paths }}"
   when: apt_deb_repo_enable_pinning
