@@ -1,3 +1,5 @@
+# !! WARNING !! DEPRECATED REPOSITORY. Use new repository at https://github.com/lnls-sirius/lnls-ansible
+
 LNLS Ansible Role Repository
 =======================
 
